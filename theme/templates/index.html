@@ -1,74 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>שבט אחים</title>
-    <meta name="description" content="">
-    <meta name="author" content="{{ AUTHOR }}">
-
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- FONT
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="theme/css/normalize.css">
-    <link rel="stylesheet" href="theme/css/skeleton.css">
+    <title>שבט אחים</title>
+    <link rel="stylesheet" href="theme/css/bulma.min.css">
+    <link rel="stylesheet" href="theme/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="theme/css/main.css">
-
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
 <body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                שבט אחים
+            </h1>
+            <p class="subtitle">
+                אירוח אוטנטי באווירה כפרית | סדנאות, פעילויות וימי גיבוש לקבוצות, חברות, מנהלים ומתעניינים
+            </p>
 
-<div class="header">
-    <div class="header-inner">
-        <div class="header-panel">
-            <img src="images/logo.png" alt="logo" />
-            <h1>שבט אחים</h1>
-            <h5>
-                אירוח אוטנטי באווירה כפרית |<br >
-                סדנאות, פעילויות וימי גיבוש לקבוצות, חברות, מנהלים ומתעניינים
-            </h5>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="container">
-    {% for article in articles %}
-        <div class="article">
-            <h1>{{ article.title }}</h1>
-            {{ article.content }}
-            <div class="row">
-                {% for src in article|pictures %}
-                    <div class="one-third column gallery">
-                        <a href="{{ src }}">
-                            <img class="u-full-width" src="{{ src }}" />
-                        </a>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                {% for article in articles %}
+                    <div class="column is-half is-flex">
+                        <div class="box">
+                            <h2 class="title is-size-4">{{ article.title }}</h2>
+                            {% include 'includes/carousel.html' %}
+                            {{ article.content }}
+                        </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
-    {% endfor %}
-</div>
+    </section>
 
-<div class="footer">
-    <div class="container">
-        <h2>לפרטים נוספים</h2>
-        אירית גוריון: 0526941141
-    </div>
-</div>
+    <footer class="footer">
+        <div class="has-text-centered">
+            <div class="title">
+                לפרטים נוספים
+            </h1>
+            <p class="subtitle">
+                אירית גוריון: 0526941141
+            </p>
+        </div>
+    </footer>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="theme/js/fontawesome.min.js"></script>
+    <script src="theme/js/bulma-carousel.min.js"></script>
+    <script src="theme/js/main.js"></script>
+
 </body>
 </html>

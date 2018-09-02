@@ -4,70 +4,9 @@ body {
     direction: rtl;
 }
 
-/* Header */
 
-html, body {
-    /* For the header to be fullscreen */
-    height: 100%;
-}
+/* Panels mods */
 
-.header {
-    background-image: url("../images/background.jpg");
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-
-.header-inner {
-    background: rgba(52, 27, 43, 0.5);
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.header-panel {
-    text-align: center;
-    color: white;
-    padding: 2em;
-}
-
-.header-panel > img {
-    max-width: 15em;
-}
-
-@media only screen and (min-width: 600px) {
-    .header-inner {
-        background: inherit;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header-panel {
-        background: rgba(52, 27, 43, 0.5);
-        width: 25em;
-        margin: auto;
-    }
-}
-
-
-/* Main */
-
-.article {
-    margin: 5em 0em 5em 0em;
-}
-
-.gallery {
-    margin: 0;
-}
-
-.one-third.column.gallery {
-    width: 33.3%;
-}
-
-
-/* Footer */
-
-.footer {
-    padding: 5em 0em 5em 0em;
-    background: rgb(52, 27, 43);
-    color: white;
+.box > p {
+    margin: 2em 0em 2em 0em;
 }

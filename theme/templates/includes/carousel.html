@@ -1,0 +1,17 @@
+<div class="carousel carousel-animate carousel-animate-fade">
+    <div class="carousel-container">
+        {% for url in article|pictures %}
+            <div class="carousel-item has-background">
+                <img class="is-background" src="{{ url }}" />
+            </div>
+        {% endfor %}
+    </div>
+    <div class="carousel-navigation is-overlay">
+        <div class="carousel-nav-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel-nav-right">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
